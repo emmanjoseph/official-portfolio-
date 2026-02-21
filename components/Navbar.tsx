@@ -5,12 +5,12 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { Button } from "./ui/button";
  
 export function NavbarDemo() {
   const navItems = [
@@ -42,7 +42,7 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary">Contact me</NavbarButton>
+            <Button variant={'secondary'} className="rounded-2xl">Contact me</Button>
           </div>
         </NavBody>
  
@@ -71,13 +71,12 @@ export function NavbarDemo() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
+              <Button
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
                 className="w-full"
               >
                 Contact me
-              </NavbarButton>
+              </Button>
             </div>
           </MobileNavMenu>
         </MobileNav>

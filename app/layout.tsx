@@ -48,6 +48,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Emmanuel Mulwa",
   description: "My personal portfolio",
+  icons:{
+    icon:"/logo.png"
+  }
 };
 
 export default function RootLayout({
