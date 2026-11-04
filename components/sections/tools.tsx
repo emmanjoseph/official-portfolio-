@@ -38,10 +38,10 @@ const skills = [
 
 const Tools = () => {
   return (
-    <section className='max-w-340 mx-auto py-20 px-4 space-y-5'>
-        <h1 className='text-center text-xl font-medium'>What I work with</h1>
+    <section className='max-w-350 mx-auto py-20 px-4 space-y-5' id="skills">
+        <h1 className='text-lg text-neutral-500 font-bold'>[ What I work with ]</h1>
 
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4">
             {skills.map((skill, index) => {
               const Icon = skill.icon
               return (

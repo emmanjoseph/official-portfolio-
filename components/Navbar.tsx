@@ -1,89 +1,53 @@
-"use client";
-import {
-  Navbar,
-  NavBody,
-  NavItems,
-  MobileNav,
-  NavbarLogo,
-  MobileNavHeader,
-  MobileNavToggle,
-  MobileNavMenu,
-} from "@/components/ui/resizable-navbar";
-import { useState } from "react";
-import { Button } from "./ui/button";
- 
-export function NavbarDemo() {
-  const navItems = [
-    {
-      name: "About",
-      link: "#features",
-    },
-    {
-      name: "Changelog",
-      link: "#pricing",
-    },
-    {
-      name: "Projects",
-      link: "#pricing",
-    },
-    {
-      name: "Skills",
-      link: "#contact",
-    },
-  ];
- 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+import React from 'react'
+import {TbAlien} from "react-icons/tb";
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
 
-  return (
-    <div className="bg-none relative w-full">
-        <Navbar>
-        {/* Desktop Navigation */}
-        <NavBody>
-          <NavbarLogo />
-          <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            <Button variant={'secondary'} className="rounded-2xl">Contact me</Button>
+const navItems = [
+  {
+    name: "About",
+    link: "#features",
+  },
+  {
+    name: "Changelog",
+    link: "#pricing",
+  },
+  {
+    name: "Projects",
+    link: "#pricing",
+  },
+  {
+    name: "Skills",
+    link: "#contact",
+  },
+];
+
+
+const Navbar = () => {
+    return (
+        <header className={'py-4 px-2 absolute top-0 left-0 right-0 w-full z-50'}>
+          <div className="w-full max-w-350 mx-auto flex justify-between items-center">
+             <div className="flex items-center space-x-2">
+               <TbAlien className="text-xl"/>
+               <span className="text-xl font-bold">Elien</span>
+             </div>
+
+              <div className="hidden md:flex items-center space-x-10">
+                  <div className="flex items-center space-x-7">
+                      {
+                          navItems.map((item) => (
+                              <a className={'text-[15px] font-semibold  hover:text-[#ff4238] transition-all'} href={item.link} key={item.name}>{item.name}</a>
+                          ))
+                      }
+                  </div>
+
+                  <Link href={'#contact'}>
+                      <Button variant="secondary" className="px-4 py-2 rounded-none text-[15px] cursor-pointer">Contact me here</Button>
+                  </Link>
+              </div>
+
           </div>
-        </NavBody>
- 
-        {/* Mobile Navigation */}
-        <MobileNav>
-          <MobileNavHeader>
-            <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
-          </MobileNavHeader>
- 
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
-            <div className="flex w-full flex-col gap-4">
-              <Button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full"
-              >
-                Contact me
-              </Button>
-            </div>
-          </MobileNavMenu>
-        </MobileNav>
-      </Navbar>
-
-    </div>
-      
-  )
-
+        </header>
+    )
 }
+export default Navbar

@@ -1,43 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const chillax = localFont({
-  src: [
-    {
-      path: "./fonts/Chillax-Extralight.woff2",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Chillax-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Chillax-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Chillax-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Chillax-Semibold.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Chillax-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-chillax",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
@@ -46,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Emmanuel Mulwa",
+  title: "Elien",
   description: "My personal portfolio",
   icons:{
     icon:"/logo.png"
@@ -62,7 +30,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
           
       <body
-        className={`${chillax.variable} ${geistMono.variable} antialiased`}
+        className={`${plusJakartaSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
          <ThemeProvider
             attribute="class"

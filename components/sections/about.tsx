@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react"
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "../ui/button";
 import { Globe3D, GlobeMarker } from "@/components/ui/3d-globe";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import {TechStackSkeleton} from "@/components/tech-stack-skeleton";
 
 const sampleMarkers: GlobeMarker[] = [
   {
@@ -95,128 +95,164 @@ const About = () => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto mt-24 px-4" id="about">
-      <div className="py-4">
-        <h1 className="text-3xl font-semibold">About Me</h1>
-      </div>
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-2">
+    <section className="max-w-7xl mx-auto px-4 py-24" id="about">
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         
-       {/* Grid 1 */}
-<div className="col-span-1 xl:row-span-3 bg-neutral-500/10 rounded-xl p-7">
-  <div className="h-full">
-    <Image
-      src="/assets/grid1.png"
-      alt="grid-1"
-      className="w-full object-contain h-90 rounded-2xl"
-      width={900}
-      height={900}
-    />
-    <div className="mt-1">
-      <p className="text-base font-semibold">Hey there I&apos;m Emmanuel</p>
-      <p className="text-[15px] leading-relaxed text-neutral-200">
-        With 3 years experience in frontend development and backend concepts, I focus on building fast, modern applications.
-      </p>
-    </div>
-  </div>
-</div>
+        {/* Grid 1 */}
+        <div className="col-span-1 min-h-[14rem]">
+          <div className="relative h-full rounded-[35px] border border-neutral-200/20 dark:border-neutral-800/80 p-2 md:p-2.5">
+            <GlowingEffect
+              spread={70}
+              glow={true}
+              disabled={false}
+              proximity={64}
+              inactiveZone={0.01}
+            />
+            <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] bg-neutral-500/10 p-6">
+              <div className="flex justify-center items-center">
+                <Image
+                  src="/assets/grid1.png"
+                  alt="grid-1"
+                  className="w-full h-[220px] md:h-[280px] object-contain rounded-2xl"
+                  width={900}
+                  height={900}
+                />
+              </div>
+              <div className="mt-3">
+                <p className="text-base font-semibold text-neutral-900 dark:text-white">Hey there I&apos;m Emmanuel</p>
+                <p className="text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+                  With 3 years experience in frontend development and backend concepts, I focus on building fast, modern applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-{/* Grid 2 */}
-<div className="col-span-1 xl:row-span-3 bg-neutral-500/10 rounded-xl p-6">
-  <div className="grid-container h-full">
-    <Image
-      src="/assets/grid2.png"
-      alt="grid-2"
-      className="w-full object-contain rounded-2xl h-90"
-      width={1000}
-      height={1000}
-    />
-    <div className="mt-1">
-      <p className="font-semibold text-base">Techstack</p>
-      <p className="text-[15px] leading-relaxed text-neutral-200">
-        I specialize in JavaScript/TypeScript with a focus on React and Next.js. I&apos;m also proficient in backend tools like Node.js, Express, and MongoDB for building full-stack apps.
-      </p>
-    </div>
-  </div>
-</div>
+        {/* Grid 2 */}
+        <div className="col-span-1 min-h-[14rem]">
+          <div className="relative h-full rounded-[35px] border border-neutral-200/20 dark:border-neutral-800/80 p-2 md:p-2.5">
+            <GlowingEffect
+              spread={70}
+              glow={true}
+              disabled={false}
+              proximity={64}
+              inactiveZone={0.01}
+            />
+            <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] bg-neutral-500/10 p-6">
+             <TechStackSkeleton/>
+              <div className="mt-3">
+                <p className="text-base font-semibold text-neutral-900 dark:text-white">Techstack</p>
+                <p className="text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+                  I specialize in JavaScript/TypeScript with a focus on React and Next.js. I&apos;m also proficient in backend tools like Node.js and Express.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-{/* Grid 3 */}
-<div className="col-span-1 xl:row-span-3 bg-neutral-500/10 rounded-xl p-6">
-  <div className="grid-container h-full">
-    <div className="flex justify-center items-center w-full h-[360px]">
-      <Globe3D
-      markers={sampleMarkers}
-      config={{
-        atmosphereColor: "#4da6ff",
-        atmosphereIntensity: 20,
-        bumpScale: 5,
-        autoRotateSpeed: 3,
-        markerSize:20
-      }}
-      className="size-100"
-      onMarkerClick={(marker) => {
-        console.log("Clicked marker:", marker.label);
-      }}
-      onMarkerHover={(marker) => {
-        if (marker) {
-          console.log("Hovering:", marker.label);
-        }
-      }}
-    />
-    </div>
-    <div className="mt-1">
-      <p className="text-base font-semibold">I can work remotely</p>
-      <p className="text-[15px] leading-relaxed text-neutral-200 mb-3">
-        I&apos;m based in Nairobi, Kenya and available for remote work.
-      </p>
-      <Link href="#contact">
-        <Button className="w-full h-12 rounded-xl bg-white/5 text-white hover:bg-white hover:text-black shadow-xl cursor-pointer">
-          Contact me
-        </Button>
-      </Link>
-    </div>
-  </div>
-</div>
-
+        {/* Grid 3 */}
+        <div className="col-span-1 min-h-[14rem]">
+          <div className="relative h-full rounded-[35px] border border-neutral-200/20 dark:border-neutral-800/80 p-2 md:p-2.5">
+            <GlowingEffect
+              spread={70}
+              glow={true}
+              disabled={false}
+              proximity={64}
+              inactiveZone={0.01}
+            />
+            <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] bg-neutral-500/10 p-6">
+              <div className="flex justify-center items-center w-full h-[220px] md:h-[280px] overflow-hidden">
+                <Globe3D
+                  markers={sampleMarkers}
+                  config={{
+                    atmosphereColor: "#4da6ff",
+                    atmosphereIntensity: 20,
+                    bumpScale: 5,
+                    autoRotateSpeed: 3,
+                    markerSize: 20,
+                  }}
+                  className="size-72"
+                  onMarkerClick={(marker) => {
+                    console.log("Clicked marker:", marker.label);
+                  }}
+                  onMarkerHover={(marker) => {
+                    if (marker) {
+                      console.log("Hovering:", marker.label);
+                    }
+                  }}
+                />
+              </div>
+              <div className="mt-3">
+                <p className="text-base font-semibold text-neutral-900 dark:text-white">I can work remotely</p>
+                <p className="text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+                  I&apos;m based in Nairobi, Kenya and available for remote work worldwide.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Grid 4 (Passion) */}
-        <div className="xl:col-span-2 xl:row-span-2 bg-neutral-500/10 rounded-xl p-6">
-          <div className="grid-container">
-            <Image
-              src={'/assets/grid3.png'}
-              alt="grid-3"
-              className="w-full h-[280px] md:h-[250px] object-contain"
-              width={1000}
-              height={1000}
+        <div className="xl:col-span-2 md:col-span-2 col-span-1 min-h-[14rem]">
+          <div className="relative h-full rounded-[35px] border border-neutral-200/20 dark:border-neutral-800/80 p-2 md:p-2.5">
+            <GlowingEffect
+              spread={70}
+              glow={true}
+              disabled={false}
+              proximity={64}
+              inactiveZone={0.01}
             />
-            <div className="mt-2">
-              <p className="text-base font-semibold">My Passion for Coding</p>
-              <p className="text-[15px] leading-relaxed text-neutral-200">
-                I love solving problems and building things through code. Programming isn&apos;t just my profession—it&apos;s my passion. I enjoy exploring new technologies and continuously sharpening my skills.
-              </p>
+            <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] bg-neutral-500/10 p-6">
+              <div>
+                <Image
+                  src="/assets/grid3.png"
+                  alt="grid-3"
+                  className="w-full h-[220px] md:h-[280px] object-contain"
+                  width={1000}
+                  height={1000}
+                />
+                <div className="mt-3">
+                  <p className="text-base font-semibold text-neutral-900 dark:text-white">My Passion for Coding</p>
+                  <p className="text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+                    I love solving problems and building things through code. Programming isn&apos;t just my profession—it&apos;s my passion. I enjoy exploring new technologies and continuously sharpening my skills.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Grid 5 (Contact) */}
-        <div className="col-span-1 xl:row-span-2 bg-neutral-500/10 rounded-xl p-6">
-          <div className="grid-container">
-            <Image
-              src="/assets/grid4.png"
-              alt="grid4"
-              className="w-full h-fit object-cover sm:object-top"
-              width={1000}
-              height={1000}
+        <div className="col-span-1 min-h-[14rem]">
+          <div className="relative h-full rounded-[35px] border border-neutral-200/20 dark:border-neutral-800/80 p-2 md:p-2.5">
+            <GlowingEffect
+              spread={70}
+              glow={true}
+              disabled={false}
+              proximity={64}
+              inactiveZone={0.01}
             />
-            <div className="-mt-5">
-              <p className="font-semibold text-center">Contact me</p>
-              <div
-                className="flex items-center justify-between cursor-pointer"
-                onClick={handleCopy}
-              >
-                <p className="bg-gradient-to-r from-cyan-50 via-blue-100 to-blue-50 text-transparent bg-clip-text">
-                  emmajoseph607@gmail.com
-                </p>
-                <Image src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"} alt="icon" width={20} height={20}/>
+            <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] bg-neutral-500/10 p-6">
+              <div>
+                <Image
+                  src="/assets/grid4.png"
+                  alt="grid4"
+                  className="w-full h-fit object-cover sm:object-top"
+                  width={1000}
+                  height={1000}
+                />
+                <div className="-mt-5">
+                  <p className="font-semibold text-center text-neutral-900 dark:text-white">Contact me</p>
+                  <div
+                    className="flex items-center justify-between cursor-pointer mt-2 px-2 py-1 rounded-lg bg-neutral-500/10 hover:bg-neutral-500/20 transition-colors"
+                    onClick={handleCopy}
+                  >
+                    <p className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 dark:from-cyan-200 dark:via-blue-200 dark:to-blue-100 text-transparent bg-clip-text text-sm font-medium">
+                      emmajoseph607@gmail.com
+                    </p>
+                    <Image src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"} alt="icon" width={20} height={20}/>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
