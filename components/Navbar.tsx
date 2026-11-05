@@ -28,7 +28,7 @@ const Navbar = () => {
         <header className={'py-4 px-2 absolute top-0 left-0 right-0 w-full z-50'}>
           <div className="w-full max-w-350 mx-auto flex justify-between items-center">
              <div className="flex items-center space-x-2">
-               <TbAlien className="text-xl"/>
+               <TbAlien className="text-xl font-bold text-[#ff4238]"/>
                <span className="text-xl font-bold">Elien</span>
              </div>
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                   </div>
 
                   <Link href={'#contact'}>
-                      <Button variant="secondary" className="px-4 py-2 rounded-none text-[15px] cursor-pointer">Contact me here</Button>
+                      <Button variant="secondary" className="px-4 py-2 rounded-none text-[15px] cursor-pointer">My Resume</Button>
                   </Link>
               </div>
 

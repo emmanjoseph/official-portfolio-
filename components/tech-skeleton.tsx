@@ -79,7 +79,7 @@ export function TechSkeleton({
 
             {/* moving beam */}
             <div
-                className="absolute inset-y-6 left-1/2 z-10 w-px animate-move bg-gradient-to-b from-transparent via-cyan-400 to-transparent"
+                className="absolute inset-y-6 left-1/2 z-10 w-px animate-move bg-gradient-to-b from-transparent via-[#ff4238] to-transparent"
                 style={{ animationDelay: `${delay}s` }}
             >
                 <div className="absolute -left-10 top-1/2 h-32 w-10 -translate-y-1/2">

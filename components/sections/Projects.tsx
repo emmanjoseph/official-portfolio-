@@ -85,7 +85,7 @@ const Ruler = () => (
 const Projects = () => {
   return (
       <section id="projects" className="text-[#f4f3ef]  bg-black">
-        <div className="mx-auto max-w-350 border-x border-t border-neutral-200/15">
+        <div className="mx-auto container border-x border-t border-neutral-200/15">
           {/* Header */}
           <div className="flex flex-col gap-6 border-b border-neutral-200/15 p-6 sm:p-8 md:flex-row md:items-end md:justify-between">
             <div className="space-y-3">
