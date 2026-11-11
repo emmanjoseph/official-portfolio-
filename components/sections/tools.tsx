@@ -1,5 +1,14 @@
-import { IconBrandNextjs, IconBrandReact, IconBrandNodejs, IconBrandTypescript, IconBrandTailwind,IconBrandGithub, IconBrandJavascript } from '@tabler/icons-react'
-import { SiExpress, SiPrisma, SiDrizzle, SiMysql, SiShadcnui, SiFramer, SiSap, SiSocketdotio, SiN8N } from 'react-icons/si'
+import {
+  IconBrandNextjs,
+  IconBrandReact,
+  IconBrandNodejs,
+  IconBrandTypescript,
+  IconBrandTailwind,
+  IconBrandGithub,
+  IconBrandJavascript,
+  IconBrandPython,
+} from '@tabler/icons-react'
+import { SiExpress, SiPrisma, SiDrizzle, SiMysql, SiShadcnui, SiFramer, SiSap, SiSocketdotio, SiN8N,SiFlask } from 'react-icons/si'
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandReactNative } from 'react-icons/tb'
 import Image from 'next/image'
@@ -11,8 +20,16 @@ const skills = [
   { name: 'Express', icon: SiExpress, spotlight: 'spotlight1' },
   { name: 'JavaScript', icon: IconBrandJavascript, spotlight: 'spotlight1' },
   { name: 'TypeScript', icon: IconBrandTypescript, spotlight: 'spotlight1' },
-  
-  
+  // { name: 'Python', icon: IconBrandPython, spotlight: 'spotlight1' },
+  // { name: 'Flask', icon: SiFlask, spotlight: 'spotlight1' },
+
+
+  // Database - spotlight4
+  { name: 'MySQL', icon: SiMysql, spotlight: 'spotlight4' },
+  { name: 'PostgreSQL', icon: BiLogoPostgresql, spotlight: 'spotlight4' },
+  { name: 'Prisma', icon: SiPrisma, spotlight: 'spotlight4' },
+  { name: 'Drizzle', icon: SiDrizzle, spotlight: 'spotlight4' },
+
   // Frontend - spotlight2
   { name: 'React', icon: IconBrandReact, spotlight: 'spotlight2' },
   { name: 'React Native', icon: TbBrandReactNative, spotlight: 'spotlight2' },
@@ -22,14 +39,9 @@ const skills = [
   { name: 'Tailwind CSS', icon: IconBrandTailwind, spotlight: 'spotlight3' },
   { name: 'Shadcn UI', icon: SiShadcnui, spotlight: 'spotlight3' },
   { name: 'GSAP', icon: SiSap, spotlight: 'spotlight3' },
-  { name: 'Framer Motion', icon: SiFramer, spotlight: 'spotlight3' },
-  
-  // Database - spotlight4
-  { name: 'MySQL', icon: SiMysql, spotlight: 'spotlight4' },
-  { name: 'PostgreSQL', icon: BiLogoPostgresql, spotlight: 'spotlight4' },
-  { name: 'Prisma', icon: SiPrisma, spotlight: 'spotlight4' },
-  { name: 'Drizzle', icon: SiDrizzle, spotlight: 'spotlight4' },
-  
+  { name: 'Framer', icon: SiFramer, spotlight: 'spotlight3' },
+
+
   // Other Tools - spotlight5
   { name: 'Git', icon: IconBrandGithub, spotlight: 'spotlight5' },
   { name: 'Socket.io', icon: SiSocketdotio, spotlight: 'spotlight5' },

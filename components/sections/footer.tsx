@@ -211,12 +211,12 @@ export default function Footer() {
             {/* Stack */}
             <div className={cell}>
               <Label>Built with</Label>
-              <p className="mt-5 text-[15px]">Next.js &amp; Tailwind CSS</p>
+              <p className="mt-5 text-[15px]"> Next.JS • Tailwind • Motion</p>
             </div>
           </div>
 
           {/* Blueprint wordmark */}
-          <div className="border-b border-neutral-200/15">
+          <div className="border-b border-neutral-200/15 text-neutral-800">
             <Ruler />
             <div className="px-4 py-6 sm:px-10 sm:py-10">
               <svg viewBox="0 0 1200 250" className="w-full" aria-label="Emmanuel" role="img">
@@ -226,18 +226,19 @@ export default function Footer() {
                     textLength="1200"
                     lengthAdjust="spacingAndGlyphs"
                     fill="none"
-                    stroke="#1c1c1c"
+                    stroke="#262626"
                     strokeWidth="1.5"
                     fontSize="270"
                     fontWeight="800"
                     style={{ fontFamily: "system-ui, sans-serif" }}
                 >
-                  MANNU.DEV
+                  ELIEN.DEV
                 </text>
               </svg>
             </div>
             <Ruler />
           </div>
+
 
           {/* Bottom bar */}
           <div className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-between">

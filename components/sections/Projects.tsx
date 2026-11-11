@@ -43,14 +43,14 @@ const projects = [
     href: "https://category7tech.com",
   },
   {
-    title: "Real-time Chat Application",
+    title: "SettleIn",
     description:
-        "Scalable messaging platform with Socket.io for instant communication and file sharing capabilities.",
+        "Real Estate and accessories mobile application scalable messaging platform with Socket.io for instant communication .",
     technologies: [
       { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
-      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "React Native", icon: SiReact, color: "#61DAFB" },
       { name: "Node.js", icon: SiNodedotjs, color: "#5FA04E" },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "Postgres", icon: SiPostgresql, color: "#47A248" },
     ],
     href: "https://chat-app.com",
   },

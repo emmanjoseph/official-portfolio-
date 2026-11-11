@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export function CTA() {
   return (
     <div className="border-y">
-           <div className="relative mx-auto flex w-full max-w-350 items-center justify-center py-28">
+           <div className="relative mx-auto flex w-full container items-center justify-center py-28">
       <DottedGlowBackground
         className="w-full pointer-events-none mask-radial-to-90% mask-radial-at-center opacity-20 dark:opacity-100"
         opacity={1}
@@ -24,7 +24,7 @@ export function CTA() {
 
       <div className="relative z-10 flex w-full flex-col  justify-between space-y-6 px-8 py-16 text-center">
         <div>
-          <h2 className="text-center text-4xl font-normal tracking-tight text-neutral-900 sm:text-5xl md:text-left dark:text-neutral-400">
+          <h2 className="text-center font-medium text-5xl font-normal tracking-tight text-neutral-900 sm:text-6xl md:text-left dark:text-neutral-400">
             Ready to collaborate <br /> and take your project to the{" "}
             <span className="font-bold dark:text-white">Next level</span>?
           </h2>

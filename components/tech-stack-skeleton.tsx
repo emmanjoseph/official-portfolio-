@@ -22,7 +22,7 @@ export function TechStackSkeleton() {
             { duration: 0.8 },
         ]);
 
-        // @ts-ignore - motion's sequence typing doesn't accept repeat options
+        // @ts-ignore
         const controls = animate(sequence, { repeat: Infinity, repeatDelay: 1 });
         return () => controls.stop();
         // eslint-disable-next-line react-hooks/exhaustive-deps
